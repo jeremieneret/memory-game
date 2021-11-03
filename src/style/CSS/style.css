@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@font-face {
+  font-family: "MagilioRegular";
+  src: local("MagilioRegular"), url("../../assets/fonts/MagilioRegular-Yzv2O.ttf") format("truetype");
+}
+h1 {
+  font-family: "MagilioRegular", serif;
+  font-size: 6rem;
+  line-height: 40%;
+}
+h1 span {
+  color: #ff7dc7;
+  font-size: 2.7rem;
+  margin-left: 65px;
+}
+
+.elastic {
+  -webkit-animation: elastic 2s ease-in-out infinite;
+          animation: elastic 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes elastic {
+  0% {
+    transform: scale(1);
+  }
+  3.9% {
+    transform: scale(1.12);
+  }
+  9.32% {
+    transform: scale(0.9);
+  }
+  11.3% {
+    transform: scale(1.05);
+  }
+  12.7% {
+    transform: scale(0.93);
+  }
+  13.8% {
+    transform: scale(1.03);
+  }
+  15.65% {
+    transform: scale(0.97);
+  }
+  15.3% {
+    transform: scale(1);
+  }
+  16% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes elastic {
+  0% {
+    transform: scale(1);
+  }
+  3.9% {
+    transform: scale(1.12);
+  }
+  9.32% {
+    transform: scale(0.9);
+  }
+  11.3% {
+    transform: scale(1.05);
+  }
+  12.7% {
+    transform: scale(0.93);
+  }
+  13.8% {
+    transform: scale(1.03);
+  }
+  15.65% {
+    transform: scale(0.97);
+  }
+  15.3% {
+    transform: scale(1);
+  }
+  16% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  letter-spacing: 0.1em;
+  height: 100vh;
+  background: #282a37;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  max-width: 625px;
+  width: 100%;
+  margin: 0 auto;
+  transform: translateY(calc(50vh - 50%));
+}
+
+p span {
+  color: #ff7dc7;
+  font-weight: 900;
+}
+
+.turns-and-matches {
+  width: 100%;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  transition: all 1s ease;
+}
+.turns-and-matches.all-six-matches {
+  font-size: 3em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+button {
+  margin: 0 auto;
+  font-family: inherit;
+  background-image: linear-gradient(to bottom, rgba(255, 125, 199, 0.8), rgba(255, 125, 199, 0.2)), url("../../assets/images/BackImg2.jpg");
+  border: none;
+  color: white;
+  font-weight: 900;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  transition: all 300ms ease;
+}
+button:hover {
+  background-image: linear-gradient(to bottom, #282a37, rgba(40, 42, 55, 0.85)), url("../../assets/images/BackImg2.jpg");
+  border: solid 1px #ff7dc7;
+  color: #ff7dc7;
+  cursor: pointer;
+}
+
+.card-grid {
+  margin: 5vh auto 0 auto;
+  display: grid;
+  grid-template-columns: 130px 130px 130px 130px;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  row-gap: 3vh;
+}
+.card-grid .card {
+  position: relative;
+}
+.card-grid .card img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  border: solid 1px white;
+  border-radius: 50%;
+  transition: all 300ms ease;
+  perspective: 150em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.card-grid .card img.front {
+  position: absolute;
+  transform: rotateY(180deg);
+}
+.card-grid .card img.back:hover {
+  cursor: pointer;
+}
+.card-grid .card .flipped .front {
+  transform: rotateY(0deg);
+}
+.card-grid .card .flipped .back {
+  transform: rotateY(180deg);
+}
+
+.logo {
+  margin: 0 auto;
+}
+.logo h1:nth-of-type(2) {
+  text-align: center;
+  opacity: 0.5;
+  color: #ff7dc7;
+  margin-top: -50px;
+}/*# sourceMappingURL=style.css.map */

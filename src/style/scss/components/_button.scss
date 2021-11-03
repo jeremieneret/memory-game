@@ -1,0 +1,24 @@
+@use "../tools/" as *;
+
+button {
+    margin: 0 auto;
+    font-family: inherit;
+    background-image: 
+    linear-gradient(to bottom, rgba($primary-main, 0.8), rgba($primary-main, 0.2)),
+    url("../../assets/images/BackImg2.jpg");
+    border: none;
+    color: $white;
+    font-weight: 900;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: all 300ms ease;
+    &:hover {
+        background-image: 
+        linear-gradient(to bottom, rgba($background, 1), rgba($background, 0.85)),
+        url("../../assets/images/BackImg2.jpg");
+        border: solid 1px $primary-main;
+        color: $primary-main;
+        cursor: pointer;
+    }
+}

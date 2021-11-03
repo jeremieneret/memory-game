@@ -1,0 +1,42 @@
+@use '../tools/' as *;
+
+body {
+    font-family: $montserrat;
+    margin: 0;
+    letter-spacing: 0.1em;
+    height: 100vh;
+    background: $background;
+    color: $text-scale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    main {
+        display: flex;
+        flex-direction: column;
+        max-width: 625px;
+        width: 100%;
+        margin: 0 auto;
+        transform: translateY(calc(50vh - 50%));
+    }
+}
+
+p span {
+    color: $primary-main;
+    font-weight: 900;
+}
+
+.turns-and-matches {
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s ease;
+    &.all-six-matches {
+        font-size: 3em;
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+

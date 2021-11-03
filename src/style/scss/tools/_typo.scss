@@ -1,0 +1,13 @@
+@use 'colors' as *;
+@use 'fonts' as *;
+
+h1 {
+    font-family: $magilio;
+    font-size: 6rem;
+    line-height: 40%;
+    span {
+        color: $primary-main;
+        font-size: 2.7rem;
+        margin-left: 65px;
+    }
+}
