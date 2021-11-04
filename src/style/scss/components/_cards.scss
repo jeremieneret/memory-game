@@ -1,24 +1,39 @@
 @use "../tools/" as *;
 
 .card-grid {
-    margin: 5vh auto 0 auto;
+    margin: 5vh auto;
     display: grid;
-    grid-template-columns: 130px 130px 130px 130px;
-    column-gap: 35px;
     row-gap: 3vh;
-    filter: hue-rotate(90deg);
-
+    grid-template-columns: 100px 100px 100px 100px;
+    column-gap: 35px;
+    @media (max-width: 950px) {
+        grid-template-columns: 90px 90px 90px 90px;
+    }
+    @media (max-width: 650px) {
+        grid-template-columns: 70px 70px 70px;
+    }
     .card {
         position: relative;
         img {
             display: block;
-            width: 130px;
-            height: 130px;
             border: solid 1px $white;
             border-radius: 50%;
             transition: all 300ms ease;
             perspective: 150em;
             backface-visibility: hidden;
+            
+            @media (min-width: 950px) {
+                width: 100px;
+                height: 100px;
+            }
+            @media (max-width: 950px) {
+                width: 90px;
+                height: 90px;
+            }
+            @media (max-width: 650px) {
+                width: 70px;
+                height: 70px;
+            }
 
             &.front {
                 position: absolute;

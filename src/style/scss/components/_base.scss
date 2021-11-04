@@ -17,6 +17,7 @@ body {
         width: 100%;
         margin: 0 auto;
         transform: translateY(calc(50vh - 50%));
+        padding: 24px;
     }
 }
 
@@ -27,12 +28,17 @@ p span {
 
 .turns-and-matches {
     width: 100%;
-    margin-top: 5vh;
     display: flex;
     justify-content: space-between;
     transition: all 1s ease;
+    @media (max-width: 650px)  {
+        margin-top: 0;
+    }
     &.all-six-matches {
         font-size: 2.2em;
+        @media (max-width: 650px)  {
+            font-size: 1.25em;
+        }
     }
 }
 

@@ -10,4 +10,12 @@ h1 {
         font-size: 2.7rem;
         margin-left: 65px;
     }
+    @media (max-width: 650px), (max-height: 800px)  {
+        margin-top: 0;
+        font-size: 4rem;
+        span {
+            font-size: 1.78rem;
+            margin-left: 45px;
+        }
+    }
 }
