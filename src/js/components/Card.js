@@ -7,16 +7,8 @@ const Card = ({ card, handleChoice, flipped }) => {
         handleChoice(card);
     }
 
-
-    // let random = Math.floor(Math.random() * 10000) + 1;
-    // const hue = `hue-rotate(${random}deg)`;
-
-
-
     return (
-        <div className="card"
-            // style={{ 'filter': hue }}
-        >
+        <div className="card">
             <div className={flipped ? "flipped" : ""}>
                 <img
                     className='front'

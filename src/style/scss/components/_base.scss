@@ -9,6 +9,7 @@ body {
     color: $text-scale;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
     main {
         display: flex;
         flex-direction: column;
@@ -31,12 +32,9 @@ p span {
     justify-content: space-between;
     transition: all 1s ease;
     &.all-six-matches {
-        font-size: 3em;
+        font-size: 2.2em;
     }
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
 
 

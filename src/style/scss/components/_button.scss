@@ -13,12 +13,25 @@ button {
     width: 100px;
     height: 100px;
     transition: all 300ms ease;
-    &:hover {
+
+    &:hover,
+    &.win-background:hover {
         background-image: 
         linear-gradient(to bottom, rgba($background, 1), rgba($background, 0.85)),
         url("../../assets/images/BackImg2.jpg");
         border: solid 1px $primary-main;
         color: $primary-main;
         cursor: pointer;
+    }
+
+    &.win-background {
+        background-image: 
+        linear-gradient(to bottom, rgba($complementary, 1), rgba($complementary, 0.8)),
+        url("../../assets/images/BackImg2.jpg");
+        
+        &:hover {
+            border: solid 1px $complementary;
+            color: $complementary;
+        }
     }
 }

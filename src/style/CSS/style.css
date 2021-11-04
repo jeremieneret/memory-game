@@ -116,11 +116,7 @@ p span {
   transition: all 1s ease;
 }
 .turns-and-matches.all-six-matches {
-  font-size: 3em;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 2.2em;
 }
 
 button {
@@ -135,11 +131,18 @@ button {
   height: 100px;
   transition: all 300ms ease;
 }
-button:hover {
+button:hover, button.win-background:hover {
   background-image: linear-gradient(to bottom, #282a37, rgba(40, 42, 55, 0.85)), url("../../assets/images/BackImg2.jpg");
   border: solid 1px #ff7dc7;
   color: #ff7dc7;
   cursor: pointer;
+}
+button.win-background {
+  background-image: linear-gradient(to bottom, #80e1ca, rgba(128, 225, 202, 0.8)), url("../../assets/images/BackImg2.jpg");
+}
+button.win-background:hover {
+  border: solid 1px #80E1CA;
+  color: #80E1CA;
 }
 
 .card-grid {

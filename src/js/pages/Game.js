@@ -74,7 +74,7 @@ const Game = () => {
       <button
         onClick={shuffle}
         className={
-          matches >= 6 ? "elastic" : ""
+          matches >= 6 ? "elastic win-background" : ""
         }
       >Wanna play?</button>
 
@@ -95,9 +95,15 @@ const Game = () => {
       <div
         className={matches >= 6 ? "turns-and-matches all-six-matches" : "turns-and-matches"}
       >
-        <p>Turns: {turns}</p>
-
-        <p>Matches: <span>{matches}</span></p>
+        {matches >= 6 &&
+          <p>Yeah! You succeeded in</p>
+        }
+        {matches < 6 &&
+          <p>Turns: {turns}</p>
+        }
+        {matches >= 6 &&
+          <p><span>{turns}</span> turns!</p>
+        }
       </div>
 
     </main>
