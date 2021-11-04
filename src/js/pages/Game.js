@@ -1,17 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../../style/CSS/style.css';
 import Card from '../components/Card';
+import { cardImages } from '../utils/cardImages';
 
-//we create an array with all six images of the front of the cards
-const cardImages = [
-  { "src": '/images/memory-game-card7.jpg', "matched": false },
-  { "src": '/images/memory-game-card8.jpg', "matched": false },
-  { "src": '/images/memory-game-card9.jpg', "matched": false },
-  { "src": '/images/memory-game-card10.jpg', "matched": false },
-  { "src": '/images/memory-game-card11.jpg', "matched": false },
-  { "src": '/images/memory-game-card12.jpg', "matched": false },
-
-]
 
 const Game = () => {
   const [cards, setCards] = useState([]);
@@ -19,25 +10,27 @@ const Game = () => {
   const [choice1, setChoice1] = useState(null);
   const [choice2, setChoice2] = useState(null);
   const [matches, setMatches] = useState(0);
+  const [cardsSet, setCardsSet] = useState(0);
+  const [style, setStyle] = useState('');
 
-  //we create a function that will shuffle the cards
   const shuffle = () => {
-    //first, let's create an array with the content of the first one, doubled, since we need some matchedes
-    const shuffledCards = [...cardImages, ...cardImages]
-      //then we use the sort() method to sort the 12 cards randomly, thanks to Math.random() - 0.5
+    const shuffledCards = [...cardImages[cardsSet], ...cardImages[cardsSet]]
       .sort(() => Math.random() - 0.5)
-      //finally we put all this in a new array, using map() method. This new array will return an array of objects with 2 keys : the src of the image, and 
-      //an id for each. To create these ids, we use a Math.random again.
       .map((card) => ({ ...card, id: Math.random() }));
 
-    //we handle the state of the cards by updating setCards (useState())
     setCards(shuffledCards);
-    //and we need to reinitiate the number of turns to 0 each time the "new game" button is clicked.
     setTurns(0);
     setMatches(0);
+
+    let random = Math.floor(Math.random() * 1000) + 1;
+    setStyle(`hue-rotate(${random}deg)`);
+
+    setCardsSet(prevCardsSet => prevCardsSet + 1)
+    if (cardsSet === 5) {
+      setCardsSet(0)
+    }
   }
 
-  //handle a choice
   const handleChoice = (card) => {
     choice1 ? setChoice2(card) : setChoice1(card)
   }
@@ -51,6 +44,9 @@ const Game = () => {
   useEffect(() => {
     if (choice1 && choice2) {
       if (choice1.src === choice2.src) {
+        resetChoicesAndIncreaseTurn()
+        setMatches(prevMatches => prevMatches + 1)
+
         setCards(prevCards => {
           return prevCards.map(card => {
             if (card.src === choice1.src) {
@@ -60,8 +56,6 @@ const Game = () => {
             }
           })
         })
-        resetChoicesAndIncreaseTurn()
-        setMatches(prevMatches => prevMatches + 1)
       }
       else {
         setTimeout(() => resetChoicesAndIncreaseTurn(), 2500);
@@ -69,24 +63,25 @@ const Game = () => {
     }
   }, [choice1, choice2])
 
-  if (matches >= 6) {
-    console.log('caca');
-  }
 
   return (
     <main>
       <div className="logo">
         <h1><span>The AMAZING</span><br />Memory</h1>
         <h1>GAME</h1>
-
       </div>
+
       <button
         onClick={shuffle}
         className={
-        matches >= 6 ? "elastic" : ""
-      }
+          matches >= 6 ? "elastic" : ""
+        }
       >Wanna play?</button>
-      <div className="card-grid">
+
+      <div
+        className="card-grid"
+        style={{ 'filter': style, }}
+      >
         {cards.map(card => (
           <Card
             key={card.id}
@@ -96,14 +91,15 @@ const Game = () => {
           />
         ))}
       </div>
-      <div className={
-        matches >= 6 ? "turns-and-matches all-six-matches" : "turns-and-matches"
-      }
 
+      <div
+        className={matches >= 6 ? "turns-and-matches all-six-matches" : "turns-and-matches"}
       >
         <p>Turns: {turns}</p>
+
         <p>Matches: <span>{matches}</span></p>
       </div>
+
     </main>
   )
 }
