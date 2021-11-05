@@ -67,14 +67,14 @@ const Game = () => {
   return (
     <main>
       <div className="logo">
-        <h1><span>The AMAZING</span><br />Memory</h1>
-        <h1>GAME</h1>
+        <h1 className='opacity_2'><span className='rightToLeft'>The AMAZING</span><br />Memory</h1>
+        <h1 className='leftToRight'>GAME</h1>
       </div>
 
       <button
         onClick={shuffle}
         className={
-          matches >= 6 ? "elastic win-background" : ""
+          matches >= 6 ? "elastic win-background" : "opacity"
         }
       >Wanna play?</button>
 
@@ -93,7 +93,7 @@ const Game = () => {
       </div>
 
       <div
-        className={matches >= 6 ? "turns-and-matches all-six-matches" : "turns-and-matches"}
+        className={matches >= 6 ? "turns-and-matches all-six-matches" : "turns-and-matches opacity"}
       >
         {matches >= 6 &&
           <p>Yeah! You succeeded in</p>

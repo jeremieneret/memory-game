@@ -94,11 +94,122 @@ h1 span {
     transform: scale(1);
   }
 }
+.rightToLeft {
+  position: absolute;
+  -webkit-animation: rightToLeft 6s cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation: rightToLeft 6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@-webkit-keyframes rightToLeft {
+  0% {
+    transform: translateX(60vw);
+  }
+  20% {
+    transform: translateX(60vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(60vw);
+  }
+  20% {
+    transform: translateX(60vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.leftToRight {
+  -webkit-animation: leftToRight 6s cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation: leftToRight 6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: relative;
+}
+
+@-webkit-keyframes leftToRight {
+  0% {
+    transform: translateX(-70vw);
+    display: none;
+  }
+  30% {
+    transform: translateX(-70vw);
+    display: none;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-70vw);
+    display: none;
+  }
+  30% {
+    transform: translateX(-70vw);
+    display: none;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.opacity {
+  -webkit-animation: opacity 6s ease;
+          animation: opacity 6s ease;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.opacity_2 {
+  -webkit-animation: opacity_2 2s ease;
+          animation: opacity_2 2s ease;
+}
+
+@-webkit-keyframes opacity_2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity_2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   letter-spacing: 0.1em;
-  height: 100vh;
   background: #282a37;
   color: white;
   -webkit-font-smoothing: antialiased;
