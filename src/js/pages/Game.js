@@ -58,7 +58,7 @@ const Game = () => {
         })
       }
       else {
-        setTimeout(() => resetChoicesAndIncreaseTurn(), 2500);
+        setTimeout(() => resetChoicesAndIncreaseTurn(), 1000);
       }
     }
   }, [choice1, choice2])

@@ -169,7 +169,7 @@ button.win-background:hover {
   margin: 5vh auto;
   display: grid;
   row-gap: 3vh;
-  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-columns: 120px 120px 120px 120px;
   -moz-column-gap: 35px;
        column-gap: 35px;
 }
@@ -197,8 +197,8 @@ button.win-background:hover {
 }
 @media (min-width: 950px) {
   .card-grid .card img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 }
 @media (max-width: 950px) {

@@ -4,7 +4,7 @@
     margin: 5vh auto;
     display: grid;
     row-gap: 3vh;
-    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-columns: 120px 120px 120px 120px;
     column-gap: 35px;
     @media (max-width: 950px) {
         grid-template-columns: 90px 90px 90px 90px;
@@ -23,8 +23,8 @@
             backface-visibility: hidden;
             
             @media (min-width: 950px) {
-                width: 100px;
-                height: 100px;
+                width: 120px;
+                height: 120px;
             }
             @media (max-width: 950px) {
                 width: 90px;

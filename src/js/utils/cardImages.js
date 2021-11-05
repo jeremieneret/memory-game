@@ -1,12 +1,12 @@
 export const cardImages =
     [
         [
-            { "src": '/images/memory-game-card1.jpg', "matched": false },
-            { "src": '/images/memory-game-card2.jpg', "matched": false },
-            { "src": '/images/memory-game-card3.jpg', "matched": false },
-            { "src": '/images/memory-game-card4.jpg', "matched": false },
-            { "src": '/images/memory-game-card5.jpg', "matched": false },
-            { "src": '/images/memory-game-card6.jpg', "matched": false },
+            { "src": '/images/memory-game-card_1.jpg', "matched": false },
+            { "src": '/images/memory-game-card_2.jpg', "matched": false },
+            { "src": '/images/memory-game-card_3.jpg', "matched": false },
+            { "src": '/images/memory-game-card_4.jpg', "matched": false },
+            { "src": '/images/memory-game-card_5.jpg', "matched": false },
+            { "src": '/images/memory-game-card_6.jpg', "matched": false },
         ],
         [
             { "src": '/images/memory-game-card_7.jpg', "matched": false },
@@ -33,20 +33,19 @@ export const cardImages =
             { "src": '/images/memory-game-card_24.jpg', "matched": false },
         ],
         [
-            { "src": '/images/memory-game-card7.jpg', "matched": false },
-            { "src": '/images/memory-game-card8.jpg', "matched": false },
-            { "src": '/images/memory-game-card9.jpg', "matched": false },
-            { "src": '/images/memory-game-card10.jpg', "matched": false },
-            { "src": '/images/memory-game-card11.jpg', "matched": false },
-            { "src": '/images/memory-game-card12.jpg', "matched": false },
-        ]
-        ,
+            { "src": '/images/memory-game-card_25.jpg', "matched": false },
+            { "src": '/images/memory-game-card_26.jpg', "matched": false },
+            { "src": '/images/memory-game-card_27.jpg', "matched": false },
+            { "src": '/images/memory-game-card_28.jpg', "matched": false },
+            { "src": '/images/memory-game-card_29.jpg', "matched": false },
+            { "src": '/images/memory-game-card_30.jpg', "matched": false },
+        ],
         [
-            { "src": '/images/memory-game-card_1.jpg', "matched": false },
-            { "src": '/images/memory-game-card_2.jpg', "matched": false },
-            { "src": '/images/memory-game-card_3.jpg', "matched": false },
-            { "src": '/images/memory-game-card_4.jpg', "matched": false },
-            { "src": '/images/memory-game-card_5.jpg', "matched": false },
-            { "src": '/images/memory-game-card_6.jpg', "matched": false },
+            { "src": '/images/memory-game-card_31.jpg', "matched": false },
+            { "src": '/images/memory-game-card_32.jpg', "matched": false },
+            { "src": '/images/memory-game-card_33.jpg', "matched": false },
+            { "src": '/images/memory-game-card_34.jpg', "matched": false },
+            { "src": '/images/memory-game-card_35.jpg', "matched": false },
+            { "src": '/images/memory-game-card_36.jpg', "matched": false },
         ],
     ]
